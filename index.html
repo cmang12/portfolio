@@ -41,13 +41,10 @@
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
+          <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#work-experience" class="nav__link">Work Experience</a></li>
           <li class="nav__item">
             <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
           </li>
         </ul>
       </nav>
@@ -59,19 +56,21 @@
           <span>Carmen Ang</span>
         </h1>
         <!-- Put a small paragraph about yourself -->
-        <p>Aspiring Software Engineer studying in National University of Singapore</p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
+        <p>Aspiring Software Engineer studying in National University of Singapore.</p>
+        <a href="#about" class="btn btn--pink">Get in touch</a>
       </div>
     </div>
   </header>
 
   <main role="main">
 
+    
+
     <!-- ***** Work ***** -->
 
     <section class="work" id="work">
       <div class="row">
-        <h2>My Work</h2>
+        <h2>Projects</h2>
         <div class="work__boxes">
 
           <!-- Each div with the work__box class is a project. -->
@@ -80,7 +79,7 @@
             <div class="work__text">
               <h3>PeerPrep</h3>
               <p>
-                Real-Time Collaborative Coding Web App. 
+                Real-Time Collaborative Coding Web App.
               </p>
               <ul class="work__list">
                 <li>React.js</li>
@@ -88,89 +87,187 @@
                 <li>Socket.io</li>
                 <li>RabbitMQ</li>
               </ul>
-
+          
               <div class="work__links">
-                <a href="https://docs.google.com/document/d/1DSmtOYfxA-e9SsCyqMZddUI-ZbwymvwnrE586RVmIdI/edit?usp=sharing" target="_blank" class="link__text">
+                <a href="https://docs.google.com/document/d/1DSmtOYfxA-e9SsCyqMZddUI-ZbwymvwnrE586RVmIdI/edit?usp=sharing" 
+                   target="_blank" 
+                   class="link__text">
                   Documentation <span>&rarr;</span>
                 </a>
-                <a href="https://github.com/CS3219-AY2324S1/ay2324s1-course-assessment-g12" title="View Source Code" target="_blank">
+                <a href="https://github.com/CS3219-AY2324S1/ay2324s1-course-assessment-g12" 
+                   title="View Source Code" 
+                   target="_blank">
                   <img src="./images/github.svg" class="work__code" alt="GitHub">
                 </a>
               </div>
             </div>
+          
             <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>My Rainbow Daily</h3>
-              <p>
-                Mood Tracker and Digital Journal Web App. 
-              </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Express.js</li>
-                <li>Node.js</li>
-                <li>Firebase</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#">
-                  <img src="https://github.com/cmang12/rainbow" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
+              <div class="carousel-container">
+                <button class="carousel-button left" onclick="prevImage('carousel-peerprep')">&#8249;</button>
+                <div class="carousel-images" id="carousel-peerprep">
+                  <img src="./images/project-1-1.png" alt="Project Image 1">
+                  <img src="./images/project-1-2.jpg" alt="Project Image 2">
+                  <img src="./images/project-1-3.png" alt="Project Image 3">
+                  <img src="./images/project-1-4.jpg" alt="Project Image 3">
+                </div>
+                <button class="carousel-button right" onclick="nextImage('carousel-peerprep')">&#8250;</button>
               </div>
             </div>
-            <div class="work__image-box">
-              <img src="./images/project-2.png" class="work__image" alt="Project 1" />
-            </div>
           </div>
+          
 
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Growfit</h3>
-              <p>
-                Gamified Health Tracker Mobile App
-              </p>
-              <ul class="work__list">
-                <li>Flutter</li>
-                <li>Firebase</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="https://github.com/jia-han/growFit" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
+       <!-- Project: My Rainbow Daily -->
+      <div class="work__box">
+        <div class="work__text">
+          <h3>My Rainbow Daily</h3>
+          <p>
+            Mood Tracker and Digital Journal Web App.
+          </p>
+          <ul class="work__list">
+            <li>React</li>
+            <li>Express.js</li>
+            <li>Node.js</li>
+            <li>Firebase</li>
+          </ul>
+          <div class="work__links">
+            <a href="https://github.com/cmang12/rainbow">
+              <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+            </a>
+          </div>
+        </div>
+        <div class="work__image-box">
+          <div class="carousel-container">
+            <button class="carousel-button left" onclick="prevImage('carousel-rainbow')">&#8249;</button>
+            <div class="carousel-images" id="carousel-rainbow">
+              <img src="./images/project-2-1.png" class="work__image" alt="Project Image 1" />
+              <img src="./images/project-2-2.png" class="work__image" alt="Project Image 2" />
+              <img src="./images/project-2-3.png" class="work__image" alt="Project Image 3" />
+              <img src="./images/project-2-4.png" class="work__image" alt="Project Image 3" />
             </div>
-            <div class="work__image-box">
-              <img src="./images/project-3.png" class="work__image" alt="Project 3" />
-            </div>
+            <button class="carousel-button right" onclick="nextImage('carousel-rainbow')">&#8250;</button>
           </div>
         </div>
       </div>
+
+      <!-- Project: Growfit -->
+      <div class="work__box">
+        <div class="work__text">
+          <h3>Growfit</h3>
+          <p>
+            Gamified Health Tracker Mobile App
+          </p>
+          <ul class="work__list">
+            <li>Flutter</li>
+            <li>Firebase</li>
+          </ul>
+          <div class="work__links">
+            <a href="https://docs.google.com/document/d/16-K2m8krnDMRGZAIPLOIhlhZ932KcDXCeH6WSZkYjQg/edit?usp=sharing" 
+                   target="_blank" 
+                   class="link__text">
+                  Documentation <span>&rarr;</span>
+                </a>
+            <a href="https://github.com/jia-han/growFit">
+              <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+            </a>
+          </div>
+        </div>
+        <div class="work__image-box">
+          <div class="carousel-container">
+            <button class="carousel-button left" onclick="prevImage('carousel-growfit')">&#8249;</button>
+            <div class="carousel-images" id="carousel-growfit">
+              <img src="./images/project-3-1.png" class="work__image" alt="Project Image 1" />
+              <img src="./images/project-3-2.png" class="work__image" alt="Project Image 2" />
+              <img src="./images/project-3-3.png" class="work__image" alt="Project Image 3" />
+              <img src="./images/project-3-4.png" class="work__image" alt="Project Image 3" />
+            </div>
+            <button class="carousel-button right" onclick="nextImage('carousel-growfit')">&#8250;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="work__box">
+        <div class="work__text">
+          <h3>SOCket</h3>
+          <p>
+            Contacts and Projects Manager for School of Computing students in NUS
+          </p>
+          <ul class="work__list">
+            <li>Java</li>
+            <li>JavaFX</li>
+            <li>JUnit</li>
+          </ul>
+          <div class="work__links">
+            <a href="https://github.com/cmang12/tp">
+              <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+            </a>
+          </div>
+        </div>
+        <div class="work__image-box">
+          <div class="carousel-container">
+            <button class="carousel-button left" onclick="prevImage('carousel-socket')">&#8249;</button>
+            <div class="carousel-images" id="carousel-socket">
+              <img src="./images/project-5.png" class="work__image" alt="Project Image 1" />
+            </div>
+            <button class="carousel-button right" onclick="nextImage('carousel-socket')">&#8250;</button>
+          </div>
+        </div>
+      </div>
+
     </section>
 
-    <!-- ***** Clients ***** -->
-
-    <section class="client" id="clients">
+    <!-- Work Experience Section -->
+    <section class="work-experience" id="work-experience">
       <div class="row">
-        <h2>Clients</h2>
-        <div class="client__logos">
-          <!-- Add logos of the clients or companies you'have worked with. -->
-          <img src="./images/ronjones.png" class="client__logo" alt="Company 2" />
-          <img src="./images/goldengrid.png" class="client__logo" alt="Company 3" />
-          <img src="./images/bullseye.png" class="client__logo" alt="Company 1" />
-          <img src="./images/mighty-furnitures.png" class="client__logo" alt="Company 1" />
-          <img src="./images/fastlane.png" class="client__logo" alt="Company 3" />
-          <img src="./images/chippy.png" class="client__logo" alt="Company 1" />
+        <h2>Work Experience</h2>
+        <div class="work-experience__item">
+          <!-- Image on the left -->
+          <div class="work-experience__image">
+            <img src="./images/vflowtech.png" alt="Company Logo" />
+          </div>
+
+          <!-- Description on the right -->
+          <div class="work-experience__description">
+            <h3>IoT Software Engineer Intern</h3>
+            <p><strong>Company:</strong> VFlowTech</p>
+            <p><strong>Duration:</strong> Jan 2023 - June 2023</p>
+            <p>
+              I collaborated on the development of a full-stack IoT management platform, 
+              allowing over 80 team members and vendors to seamlessly monitor and interact 
+              with IoT devices across Singapore’s islands. I enhanced user communication with
+               battery systems, improving the visual presentation of data. To streamline report generation, 
+               I developed a feature that automatically formatted sensor and gateway data using React.js
+               , Node.js, Python, and various AWS services.
+            </p>
+          </div>
         </div>
+
+        <div class="work-experience__item">
+          <!-- Image on the left -->
+          <div class="work-experience__image">
+            <img src="./images/nus.jpg" alt="Company Logo" width="300"  />
+
+          </div>
+
+          <!-- Description on the right -->
+          <div class="work-experience__description">
+            <h3>Teaching Assistant</h3>
+            <p><strong>Company:</strong> National University of Singapore</p>
+            <p><strong>Duration:</strong> Jan 2022 - Now</p>
+            <p>
+              I’ve contributed to teaching and grading for courses like CS2100 (Computer Organization), 
+              CS2102 (Database Systems), and CS4225 (Big Data Systems for Data Science),
+               where I helped students grasp key concepts and provided support for course materials.
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
+
+    
+
+
 
     <!-- ***** About ***** -->
 
@@ -187,36 +284,19 @@
             </p>
             <!-- Provide a link to your resume -->
             <a href="#" class="btn">My Resume</a>
+            <div style="height: 20px;"></div>
+            <a href="carmen.ang12@gmail.com" class="btn">Email</a>
           </div>
 
           <div class="about__photo-container">
             <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
+            <img class="about__photo" src="./images/profile.jpeg" alt="" />
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ***** Contact ***** -->
-
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Get in Touch</h2>
-      <div class="contact__info">
-        <p>
-          Are you looking for a fast-performing and user-friendly website to
-          represent your product or business? or looking for any kind of
-          consultation? or want to ask questions? or have some advice for me
-          or just want to say "Hi 👋" in any case feel free to Let me know. I
-          will do my best to respond back. 😊 The quickest way to reach out to
-          me is via an email.
-        </p>
-        <!-- Replace the email with yours -->
-        <a href="mailto:you@example.com" class="btn">you@example.com</a>
-      </div>
-    </div>
-  </section>
 
   <!-- ***** Footer ***** -->
 
@@ -225,22 +305,12 @@
       <!-- Update the links to point to your accounts -->
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
-          <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://github.com/nisarhassan12/" title="Link to Github Profile">
+          <a href="https://github.com/cmang12/" title="Link to Github Profile">
             <img src="./images/github.svg" class="footer__social-image" alt="Github">
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/nisar-hassan-naqvi-413466199/">
+          <a href="https://www.linkedin.com/in/carmenang12/">
             <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
           </a>
         </li>

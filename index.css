@@ -405,7 +405,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .header {
     background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
-        url('./images/header.jpg');
+        url('./images/space.jpg');
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -611,3 +611,48 @@ body:not(.user-is-tabbing) a:focus {
         padding: var(--gutter-medium) 0;
     } 
 }
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Carousel Images */
+  .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Optional: set to control responsiveness */
+  }
+  
+  .carousel-images img {
+    width: 100%; /* Ensures the image takes up full width of the container */
+    flex-shrink: 0; /* Prevents images from shrinking */
+  }
+  
+  /* Carousel Buttons */
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .carousel-button.left {
+    left: 10px;
+  }
+  
+  .carousel-button.right {
+    right: 10px;
+  }
+
+
+
+  
+  

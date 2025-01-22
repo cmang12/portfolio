@@ -41,3 +41,35 @@ window.addEventListener("scroll", () => {
     alterStyles(isBackToTopRendered);
   }
 });
+
+const carousels = {}; // To track the current index of each carousel
+
+function updateCarousel(id) {
+  const carousel = document.getElementById(id);
+  const currentIndex = carousels[id] || 0;
+  const imageWidth = carousel.children[0].clientWidth;
+  carousel.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+}
+
+function prevImage(id) {
+  if (!carousels[id]) carousels[id] = 0;
+  if (carousels[id] > 0) {
+    carousels[id]--;
+    updateCarousel(id);
+  }
+}
+
+function nextImage(id) {
+  const carousel = document.getElementById(id);
+  if (!carousels[id]) carousels[id] = 0;
+  if (carousels[id] < carousel.children.length - 1) {
+    carousels[id]++;
+    updateCarousel(id);
+  }
+}
+
+// Adjust all carousels on window resize
+window.addEventListener('resize', () => {
+  Object.keys(carousels).forEach(updateCarousel);
+});
+
